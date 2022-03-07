@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+   
+   
+    <title>SUDOKO</title>
+</head>
+<body>
+    <div class="btnContainer">
+         <div class="flex">
+             <div class="right"> 
+                 <button class="easy">Easy</button>
+             </div>
+             <div class="center">
+             <button class="medium">Medium</button>
+         </div>
+         <div class="left">
+             <button class="hard">Hard</button>
+         </div>    
+        </div>
+        </div>
+        <center><h2 class="h2"></h2></center>
+        <div class="taContainer">
+            <table>
+                <tbody class="table">
+                <tr class="rows">
+                    <td class="col"><input type="text" id="00" value="" class="cell" maxlength="1" onkeypress='return restrictAlphabets(event)'></td>
+                    <td class="col"><input type="text" id="01"class="cell" maxlength="1" onkeypress='return restrictAlphabets(event)'></td>
+                    <td class="col thickright"><input id="02" type="text" class="cell" maxlength="1" onkeypress='return restrictAlphabets(event)'></td>
+                    <td class="col"><input type="text" id="03" class="cell" maxlength="1" onkeypress='return restrictAlphabets(event)'></td>
+                    <td class="col"><input type="text" id="04" class="cell" maxlength="1" onkeypress='return restrictAlphabets(event)'></td>
+                    <td class="col thickright"><input id="05" type="text" class="cell" maxlength="1" onkeypress='return restrictAlphabets(event)'></td>
+                    <td class="col"><input type="text" id="06" class="cell" maxlength="1" onkeypress='return restrictAlphabets(event)'></td>
+                    <td class="col"><input type="text" id="07" class="cell" maxlength="1" onkeypress='return restrictAlphabets(event)'></td>
+                    <td class="col"><input type="text" id="08" class="cell" maxlength="1" onkeypress='return restrictAlphabets(event)'></td>
+                </tr>
+                <tr class="rows">
+                    <td class="col"><input type="text" id="10" class="cell" maxlength="1" onkeypress='return restrictAlphabets(event)'></td>
+                    <td class="col"><input type="text" id="11" class="cell" maxlength="1" onkeypress='return restrictAlphabets(event)'></td>
+                    <td class="col thickright"><input type="text" id="12" class="cell" maxlength="1" onkeypress='return restrictAlphabets(event)'></td>
+                    <td class="col"><input type="text" id="13" class="cell" maxlength="1" onkeypress='return restrictAlphabets(event)'></td>
+                    <td class="col"><input type="text" id="14" class="cell" maxlength="1" onkeypress='return restrictAlphabets(event)'></td>
+                    <td class="col thickright"><input id="15" type="text" class="cell" maxlength="1" onkeypress='return restrictAlphabets(event)'></td>
+                    <td class="col"><input type="text" id="16" class="cell" maxlength="1" onkeypress='return restrictAlphabets(event)'></td>
+                    <td class="col"><input type="text" id="17" class="cell" maxlength="1" onkeypress='return restrictAlphabets(event)'></td>
+                    <td class="col"><input type="text" id="18" class="cell" maxlength="1" onkeypress='return restrictAlphabets(event)'></td>
+                </tr>
+                <tr class="rows thickbottom">
+                    <td class="col"><input type="text" id="20" class="cell" maxlength="1" onkeypress='return restrictAlphabets(event)'></td>
+                    <td class="col"><input type="text" id="21" class="cell" maxlength="1" onkeypress='return restrictAlphabets(event)'></td>
+                    <td class="col thickright"><input id="22" type="text" class="cell" maxlength="1" onkeypress='return restrictAlphabets(event)'></td>
+                    <td class="col"><input type="text" id="23" class="cell" maxlength="1" onkeypress='return restrictAlphabets(event)'></td>
+                    <td class="col"><input type="text" id="24" class="cell" maxlength="1" onkeypress='return restrictAlphabets(event)'></td>
+                    <td class="col thickright"><input id="25" type="text" class="cell" maxlength="1" onkeypress='return restrictAlphabets(event)'></td>
+                    <td class="col"><input type="text" id="26" class="cell" maxlength="1" onkeypress='return restrictAlphabets(event)'></td>
+                    <td class="col"><input type="text" id="27" class="cell" maxlength="1" onkeypress='return restrictAlphabets(event)'></td>
+                    <td class="col"><input type="text" id="28" class="cell" maxlength="1" onkeypress='return restrictAlphabets(event)'></td>
+                </tr>
+                <tr class="rows">
+                    <td class="col"><input type="text" id="30" class="cell" maxlength="1" onkeypress='return restrictAlphabets(event)'></td>
+                    <td class="col"><input type="text" id="31" class="cell" maxlength="1" onkeypress='return restrictAlphabets(event)'></td>
+                    <td class="col thickright"><input id="32" type="text" class="cell" maxlength="1" onkeypress='return restrictAlphabets(event)'></td>
+                    <td class="col"><input type="text" id="33" class="cell" maxlength="1" onkeypress='return restrictAlphabets(event)'></td>
+                    <td class="col"><input type="text" id="34" class="cell" maxlength="1" onkeypress='return restrictAlphabets(event)'></td>
+                    <td class="col thickright"><input id="35" type="text" class="cell" maxlength="1" onkeypress='return restrictAlphabets(event)'></td>
+                    <td class="col"><input type="text" id="36" class="cell" maxlength="1" onkeypress='return restrictAlphabets(event)'></td>
+                    <td class="col"><input type="text" id="37" class="cell" maxlength="1" onkeypress='return restrictAlphabets(event)'></td>
+                    <td class="col"><input type="text" id="38" class="cell" maxlength="1" onkeypress='return restrictAlphabets(event)'></td>
+                </tr>
+                <tr class="rows">
+                    <td class="col"><input type="text" id="40"class="cell" maxlength="1" onkeypress='return restrictAlphabets(event)'></td>
+                    <td class="col"><input type="text" id="41" class="cell" maxlength="1" onkeypress='return restrictAlphabets(event)'></td>
+                    <td class="col thickright"><input id="42" type="text" class="cell" maxlength="1" onkeypress='return restrictAlphabets(event)'></td>
+                    <td class="col"><input type="text" id="43" class="cell" maxlength="1" onkeypress='return restrictAlphabets(event)'></td>
+                    <td class="col"><input type="text" id="44" class="cell" maxlength="1" onkeypress='return restrictAlphabets(event)'></td>
+                    <td class="col thickright"><input id="45" type="text" class="cell" maxlength="1" onkeypress='return restrictAlphabets(event)'></td>
+                    <td class="col"><input type="text" id="46" class="cell" maxlength="1" onkeypress='return restrictAlphabets(event)'></td>
+                    <td class="col"><input type="text" id="47" class="cell" maxlength="1" onkeypress='return restrictAlphabets(event)'></td>
+                    <td class="col"><input type="text" id="48" class="cell" maxlength="1" onkeypress='return restrictAlphabets(event)'></td>
+                </tr>
+                <tr class="rows thickbottom">
+                    <td class="col"><input type="text" id="50" class="cell" maxlength="1" onkeypress='return restrictAlphabets(event)'></td>
+                    <td class="col"><input type="text" id="51" class="cell" maxlength="1" onkeypress='return restrictAlphabets(event)'></td>
+                    <td class="col thickright"><input id="52" type="text" class="cell" maxlength="1" onkeypress='return restrictAlphabets(event)'></td>
+                    <td class="col"><input type="text" id="53" class="cell" maxlength="1" onkeypress='return restrictAlphabets(event)'></td>
+                    <td class="col"><input type="text" id="54" class="cell" maxlength="1" onkeypress='return restrictAlphabets(event)'></td>
+                    <td class="col thickright"><input id="55" type="text" class="cell" maxlength="1" onkeypress='return restrictAlphabets(event)'></td>
+                    <td class="col"><input type="text" id="56" class="cell" maxlength="1" onkeypress='return restrictAlphabets(event)'></td>
+                    <td class="col"><input type="text" id="57" class="cell" maxlength="1" onkeypress='return restrictAlphabets(event)'></td>
+                    <td class="col"><input type="text"  id="58" class="cell" maxlength="1" onkeypress='return restrictAlphabets(event)'></td>
+                </tr>
+                <tr class="rows">
+                    <td class="col"><input type="text" id="60" class="cell" maxlength="1" onkeypress='return restrictAlphabets(event)'></td>
+                    <td class="col"><input type="text" id="61" class="cell" maxlength="1" onkeypress='return restrictAlphabets(event)'></td>
+                    <td class="col thickright"><input id="62" type="text" class="cell" maxlength="1" onkeypress='return restrictAlphabets(event)'></td>
+                    <td class="col"><input type="text" id="63" class="cell" maxlength="1" onkeypress='return restrictAlphabets(event)'></td>
+                    <td class="col"><input type="text" id="64" class="cell" maxlength="1" onkeypress='return restrictAlphabets(event)'></td>
+                    <td class="col thickright"><input id="65" type="text" class="cell" maxlength="1" onkeypress='return restrictAlphabets(event)'></td>
+                    <td class="col"><input type="text" id="66" class="cell" maxlength="1" onkeypress='return restrictAlphabets(event)'></td>
+                    <td class="col"><input type="text" id="67" class="cell" maxlength="1" onkeypress='return restrictAlphabets(event)'></td>
+                    <td class="col"><input type="text" id="68" class="cell" maxlength="1" onkeypress='return restrictAlphabets(event)'></td>
+                </tr>
+                <tr class="rows">
+                    <td class="col"><input type="text" id="70" class="cell" maxlength="1" onkeypress='return restrictAlphabets(event)'></td>
+                    <td class="col"><input type="text" id="71" class="cell" maxlength="1" onkeypress='return restrictAlphabets(event)'></td>
+                    <td class="col thickright"><input id="72" type="text" class="cell" maxlength="1" onkeypress='return restrictAlphabets(event)'></td>
+                    <td class="col"><input type="text" id="73" class="cell" maxlength="1" onkeypress='return restrictAlphabets(event)'></td>
+                    <td class="col"><input type="text" id="74" class="cell" maxlength="1" onkeypress='return restrictAlphabets(event)'></td>
+                    <td class="col thickright"><input id="75" type="text" class="cell" maxlength="1" onkeypress='return restrictAlphabets(event)'></td>
+                    <td class="col"><input type="text" id="76" class="cell" maxlength="1" onkeypress='return restrictAlphabets(event)'></td>
+                    <td class="col"><input type="text" id="77" class="cell" maxlength="1" onkeypress='return restrictAlphabets(event)'></td>
+                    <td class="col"><input type="text" id="78" class="cell" maxlength="1" onkeypress='return restrictAlphabets(event)'></td>
+                </tr>
+                <tr class="rows">
+                    <td class="col"><input type="text" id="80" class="cell" maxlength="1" onkeypress='return restrictAlphabets(event)'></td>
+                    <td class="col"><input type="text" id="81" class="cell" maxlength="1" onkeypress='return restrictAlphabets(event)'></td>
+                    <td class="col thickright"><input id="82" type="text" class="cell" maxlength="1" onkeypress='return restrictAlphabets(event)'></td>
+                    <td class="col"><input type="text" id="83" class="cell" maxlength="1" onkeypress='return restrictAlphabets(event)'></td>
+                    <td class="col"><input type="text" id="84" class="cell" maxlength="1" onkeypress='return restrictAlphabets(event)'></td>
+                    <td class="col thickright"><input id="85" type="text" class="cell" maxlength="1" onkeypress='return restrictAlphabets(event)'></td>
+                    <td class="col"><input type="text" id="86" class="cell" maxlength="1" onkeypress='return restrictAlphabets(event)'></td>
+                    <td class="col"><input type="text" id="87" class="cell" maxlength="1" onkeypress='return restrictAlphabets(event)'></td>
+                    <td class="col"><input type="text" id="88" class="cell" maxlength="1" onkeypress='return restrictAlphabets(event)'></td>
+                </tr>
+                </tbody>
+            </table>
+
+
+            </div>
+            <div class="valContainer">
+                <button class="validate">Validate</button>
+            </div>
+
+            
+</body>
+<script src="index.js"></script>
+</html>

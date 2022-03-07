@@ -1,0 +1,110 @@
+body{
+    font-family: Source Sans Pro,sans-serif;
+font-size: 25px;
+
+}
+
+
+.btnContainer{
+    padding:30px;
+    padding-top: 20px;
+}
+.flex{
+    display:flex;
+    flex-flow: row wrap;
+    justify-content:center;
+    align-items: stretch;
+}
+.flex > div{
+    flex:1;
+ 
+}
+.right{
+    text-align:right;
+}
+.center{
+    text-align: center;
+}
+.left{
+    text-align: left;
+}
+
+.btnContainer .hard,.easy,.medium{
+    width:150px;
+    height:50px;
+    border:none;
+    font-size:25px;
+}
+.taContainer{
+    display:flex;
+    justify-content: center;
+  
+}
+.taContainer table{
+    border-collapse: collapse;
+   border:2px solid #344861;;
+    table-layout: fixed;
+}
+.taContainer .cell{
+    width: 60px;
+    box-sizing: border-box;
+    height:60px;
+   border:none;
+   font-size:25px; 
+   text-align:center;
+   font-family: Source Sans Pro,sans-serif;
+}
+.taContainer td{
+    padding:0;
+    border:1px solid #bec6d4;
+
+}
+.taContainer tr{
+    padding:0;
+}
+.taContainer .thickbottom{
+    border-bottom:2px solid #344861;
+}
+.taContainer .thickright{
+    border-right:2px solid #344861;
+}
+.valContainer{
+    display:flex;
+    justify-content: center;
+    padding:30px;
+}
+.validate{
+    width:200px;
+    height:50px;
+    font-size: 25px;
+    border: none;
+}
+
+.redcell{
+    background-color: aliceblue;
+    color: red;
+    width: 60px;
+    box-sizing: border-box;
+    height:60px;
+   border:none;
+   font-size:25px; 
+   text-align:center;
+   font-family: Source Sans Pro,sans-serif;
+    
+}
+.blackcell
+{
+    background-color: aliceblue;
+    width: 60px;
+    box-sizing: border-box;
+    height:60px;
+   border:none;
+   font-size:25px; 
+   text-align:center;
+   font-family: Source Sans Pro,sans-serif; 
+}
+.h2
+{
+    color:dodgerblue;
+    font-family: Source Sans Pro,sans-serif; 
+}
